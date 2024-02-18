@@ -1,3 +1,3 @@
 document.getElementById('buy-tickets-btn').addEventListener('click',function(){
-    document.getElementById("see-all-offers-btn").scrollIntoView({behavior: 'smooth'});
+    document.getElementById("buy-tickets-section").scrollIntoView({behavior: 'smooth'});
 })
