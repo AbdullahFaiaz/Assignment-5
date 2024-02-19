@@ -71,7 +71,7 @@ for (let i = 0; i < buttons.length; i++) {
         number.addEventListener('input', next);
         function next() {
             const gett = document.getElementById('seatBooked').innerText
-            if (nam.value.trim() !== "" && number.value.trim() !== "" && gett !== '0') {
+            if (number.value.trim() !== "" && gett !== '0') {
                 nextButton.removeAttribute('disabled');
                 nextButton.style.color = 'white';
                 nextButton.style.backgroundColor = '#1dd100';
@@ -104,6 +104,9 @@ function couponCheck(){
             const past = parseInt(pastGrand);
             result = (past * 20) / 100;
             document.getElementById('grandTotal').innerText = past- result;
+            document.getElementById('discountPrice').innerText= result;
+            const discount = document.getElementById('discount');
+            discount.classList.remove('hidden');
     }
     else{
         window.alert('wrong coupon');
