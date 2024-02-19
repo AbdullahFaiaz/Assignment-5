@@ -65,7 +65,7 @@ const nam = document.getElementById('inputName');
 const number = document.getElementById('inputNumber');
 const nextButton = document.getElementById('nextBtn');
 
-
+// seats
 
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
@@ -75,10 +75,13 @@ for (let i = 0; i < buttons.length; i++) {
         number.addEventListener('input', next);
         function next() {
             const gett = document.getElementById('seatBooked').innerText
-            if (number.value.trim() !== "" && gett !== '0') {
-                nextButton.removeAttribute('disabled');
-                nextButton.style.color = 'white';
-                nextButton.style.backgroundColor = '#1dd100';
+            if (number.value.length > 0 && gett !== '0') {
+                if(!isNaN(number.value)){
+                    nextButton.removeAttribute('disabled');
+                    nextButton.style.color = 'white';
+                    nextButton.style.backgroundColor = '#1dd100';
+                }
+
             } else {
                 nextButton.setAttribute('disabled', true);
                 nextButton.style.color = 'gray';
@@ -87,6 +90,7 @@ for (let i = 0; i < buttons.length; i++) {
         }
 
     })}
+    // coupon
     const coupon = document.getElementById('coupon');
     const apply = document.getElementById('apply');
 function couponCheck(){
