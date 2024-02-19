@@ -47,12 +47,16 @@ for (let i = 0; i < buttons.length; i++) {
                 btn.disabled = true;
             }
             document.getElementById('warn').removeAttribute('hidden');
+            document.getElementById('apply').removeAttribute('disabled');
+            document.getElementById('apply').style.backgroundColor = '#1dd100';
+            
         }
         else{
             for(const btn of buttons){
                 btn.disabled = false;
             }
-            
+            document.getElementById('apply').setAttribute('disabled', true);
+            document.getElementById('apply').style.backgroundColor = '#a8b4a6';
             }
         
     });
