@@ -83,4 +83,32 @@ for (let i = 0; i < buttons.length; i++) {
         }
 
     })}
+    const coupon = document.getElementById('coupon');
+    const apply = document.getElementById('apply');
+function couponCheck(){
+    if(coupon.value === 'NEW15'){
+        document.getElementById('coupon').remove();
+        document.getElementById('apply').remove();
+        const pastGrand = document.getElementById('grandTotal').innerText;
+        const past = parseInt(pastGrand);
+        result = (past * 15) / 100;
+        document.getElementById('grandTotal').innerText = past - result;
+        document.getElementById('discountPrice').innerText= result;
+        const discount = document.getElementById('discount');
+        discount.classList.remove('hidden');
+    }
+    else if(coupon.value === 'Couple 20'){
+            document.getElementById('coupon').remove();
+            document.getElementById('apply').remove();
+            const pastGrand = document.getElementById('grandTotal').innerText;
+            const past = parseInt(pastGrand);
+            result = (past * 20) / 100;
+            document.getElementById('grandTotal').innerText = past- result;
+    }
+    else{
+        window.alert('wrong coupon');
+    }
+}
 
+
+apply.addEventListener('click', couponCheck)

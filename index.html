@@ -100,13 +100,13 @@
 
         <div id="" class="mt-11 md:mt-24 mb-10">
             <!--  heading  -->
-                <div class="flex flex-col items-center ">
+                <div  id="buy-tickets-section" class="flex flex-col items-center ">
                 <h1 class="font-bold text-xl sm:text-4xl lg:text-[40px] mb-2 md:mb-5"> P.H Paribahan </h1> 
                 <p class="inter-normal text-[#03071299] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[18px] text-center"> Have a better deal with P.H Paribahan. It's cheap, cost effecient at the same <br> time ensuring a comfortable journey for you </p>
                 </div>
         <!-- Ticket Coupon_________________ -->
                 <!-- ticket -->
-                <div id="buy-tickets-section" class="bg-[#ffffff] rounded-3xl w-[80%] mx-auto mt-6 flex flex-col lg:flex-row lg:h-[330px]">
+                <div class="bg-[#ffffff] rounded-3xl w-[80%] mx-auto mt-6 flex flex-col lg:flex-row lg:h-[330px]">
                     <div class="flex-1">           
                         <div>                    
                             <div class="w-[90%] mx-auto">
@@ -214,9 +214,14 @@
                                 <!-- ++++++++++++++++++++++++++++++++ -->
                                 <div>BDT <span id="totalPrice">000</span></div>
                             </div>
+                            <div id="discount" class="hidden flex justify-between m-2 font-bold">
+                                <div>Discount Price</div>
+                                <!-- ++++++++++++++++++++++++++++++++ -->
+                                <div>BDT <span id="discountPrice">000</span></div>
+                            </div>
                             <div class="flex flex-col relative">
-                                <input placeholder="Have any coupon?" id="" class="bg-white flex-1 rounded-md box-border p-4">
-                                <button class="absolute mt-2 mr-2 right-0 hover:bg-green-600 text-white font-bold flex items-center justify-center rounded-lg py-2 px-7 bg-[#1dd100]">Apply</button>
+                                <input placeholder="Have any coupon?" id="coupon" class="bg-white flex-1 rounded-md box-border p-4">
+                                <button id="apply" class="absolute mt-2 mr-2 right-0 hover:bg-green-600 text-white font-bold flex items-center justify-center rounded-lg py-2 px-7 bg-[#1dd100]">Apply</button>
                                 
                             </div>
                             <div class="flex justify-between m-2 border-dashed border-gray-200 font-bold">
