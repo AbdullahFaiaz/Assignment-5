@@ -1,17 +1,4 @@
-// function ad(elementID){
-//     const newSection = document.createElement('div');//creating an element
-//     newSection.innerHTML = 
-//     ` <div class="flex justify-between m-2 font-bold">
-//     <span class="spano font-extrabold"></span>
-//     <div>Economy</div>
-//     <div>550 Tk</div>
-//     </div> `; // adding innerHTML to the created element
-//     newSection.classList.add(elementID);
-//     document.getElementById('append').appendChild(newSection);
-//     let b = document.getElementsByClassName(elementID)[0];
-//     b.getElementsByClassName('spano')[0].innerText = elementID
-    
-// }
+
 function adrem(elementID){
     const parentElement = document.getElementById("append");
 
@@ -42,6 +29,11 @@ function adrem(elementID){
         newParent.appendChild(newElementc);
     }
 }
+
+
+
+
+
 
 function addColor(elementID) {
     const element = document.getElementById(elementID);

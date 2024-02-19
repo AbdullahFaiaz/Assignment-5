@@ -5,14 +5,13 @@ document.getElementById('buy-tickets-btn').addEventListener('click',function(){
 })
 
 
-// 
-
 
 const buttons = document.getElementsByClassName('but');
-let count = 0;
+
 
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
+
     button.addEventListener('click', function (event) {
         const key = event.target.innerText;
         const press = event.target.style.backgroundColor;
@@ -24,6 +23,7 @@ for (let i = 0; i < buttons.length; i++) {
             increase('totalPrice',550);
             increase('grandTotal',550);
             decrease('seatLeft',1);
+            
 
             
             
@@ -34,6 +34,7 @@ for (let i = 0; i < buttons.length; i++) {
             decrease('totalPrice',550);
             decrease('grandTotal',550);
             increase('seatLeft',1);
+            
             
             document.getElementById('warn').setAttribute('hidden',true);
 
@@ -56,3 +57,30 @@ for (let i = 0; i < buttons.length; i++) {
         
     });
 }
+const nam = document.getElementById('inputName');
+const number = document.getElementById('inputNumber');
+const nextButton = document.getElementById('nextBtn');
+
+
+
+for (let i = 0; i < buttons.length; i++) {
+    let button = buttons[i];
+
+    button.addEventListener('click', function () {
+        nam.addEventListener('input', next);
+        number.addEventListener('input', next);
+        function next() {
+            const gett = document.getElementById('seatBooked').innerText
+            if (nam.value.trim() !== "" && number.value.trim() !== "" && gett !== '0') {
+                nextButton.removeAttribute('disabled');
+                nextButton.style.color = 'white';
+                nextButton.style.backgroundColor = '#1dd100';
+            } else {
+                nextButton.setAttribute('disabled', true);
+                nextButton.style.color = 'gray';
+                nextButton.style.backgroundColor = '#9bac99';
+            }
+        }
+
+    })}
+
