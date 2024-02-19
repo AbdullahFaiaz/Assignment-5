@@ -5,15 +5,17 @@ document.getElementById('buy-tickets-btn').addEventListener('click',function(){
 })
 
 
-
+// seats
 const buttons = document.getElementsByClassName('but');
 
-
+let keyCollect = [];
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
 
     button.addEventListener('click', function (event) {
         const key = event.target.innerText;
+
+
         const press = event.target.style.backgroundColor;
         
         adrem(key);
@@ -23,7 +25,7 @@ for (let i = 0; i < buttons.length; i++) {
             increase('totalPrice',550);
             increase('grandTotal',550);
             decrease('seatLeft',1);
-            
+            keyCollect.push(key);
 
             
             
@@ -34,7 +36,7 @@ for (let i = 0; i < buttons.length; i++) {
             decrease('totalPrice',550);
             decrease('grandTotal',550);
             increase('seatLeft',1);
-            
+            keyCollect.pop();
             
             document.getElementById('warn').setAttribute('hidden',true);
 
@@ -65,7 +67,7 @@ const nam = document.getElementById('inputName');
 const number = document.getElementById('inputNumber');
 const nextButton = document.getElementById('nextBtn');
 
-// seats
+
 
 for (let i = 0; i < buttons.length; i++) {
     let button = buttons[i];
@@ -83,9 +85,7 @@ for (let i = 0; i < buttons.length; i++) {
                 }
 
             } else {
-                nextButton.setAttribute('disabled', true);
-                nextButton.style.color = 'gray';
-                nextButton.style.backgroundColor = '#9bac99';
+                disableNextButton()
             }
         }
 
@@ -123,3 +123,9 @@ function couponCheck(){
 
 
 apply.addEventListener('click', couponCheck)
+
+
+
+// continue btn
+
+document.getElementById('continueBtn').addEventListener('click',disableNextButton);

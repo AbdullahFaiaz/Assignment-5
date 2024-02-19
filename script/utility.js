@@ -60,3 +60,28 @@ function decrease(elementID,decrement){
     element.innerText = result;
 }
 
+function disableNextButton(){
+    
+    document.getElementById('nextBtn').setAttribute('disabled', true);
+    document.getElementById('nextBtn').style.color = 'gray';
+    document.getElementById('nextBtn').style.backgroundColor = '#9bac99';
+}
+function unclick(){
+    const buttos = document.getElementsByClassName('but');
+    for(butto of keyCollect){
+        document.getElementById(butto).style.backgroundColor = 'rgb(247, 248, 248)';
+    }
+
+    document.getElementById('seatLeft').innerText = 0;
+    document.getElementById('grandTotal').innerText = 0;
+    document.getElementById('totalPrice').innerText = 0;
+    document.getElementById('seatBooked').innerText = 0;
+    document.getElementById("append").classList.add('hidden');
+    document.getElementById("warn").classList.add('hidden');
+}
+
+function clearInputs(){
+    document.getElementById('inputName').value = "";
+    document.getElementById('inputNumber').value = "";
+    document.getElementById('inputMail').value = "";
+}

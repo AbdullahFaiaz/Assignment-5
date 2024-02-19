@@ -241,7 +241,7 @@
                                 </div>    
                                 <div class="flex flex-col">
                                     <label class="font-bold text-lg" for="Email">Email Id</label>
-                                    <input class="p-3 bg-white flex-1 rounded-md box-border" type="email" name="Email" placeholder="Enter your email id">
+                                    <input id="inputMail" class="p-3 bg-white flex-1 rounded-md box-border" type="email" name="Email" placeholder="Enter your email id">
                                 </div>
                                 <div class="flex flex-col mt-7">
                                     <button disabled id="nextBtn" onclick="my_modal_5.showModal()" class="flex-1 text-[gray] font-bold rounded-lg py-2 px-7 bg-[#9bac99]">Next</button>
@@ -260,7 +260,7 @@
                                         <form method="dialog">
                                             <!-- if there is a button in form, it will close the modal -->
                                             <div class="flex items-center justify-center">
-                                                <button type="submit" class="btn rounded-r-full rounded-l-full w-48 bg-[#27ae60]">Continue</button>
+                                                <button onclick="unclick(),disableNextButton(),clearInputs()"  id="continueBtn" type="submit" class="btn rounded-r-full rounded-l-full w-48 bg-[#27ae60]">Continue</button>
                                             </div>
                                         </form>
                                     
