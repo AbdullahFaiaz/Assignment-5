@@ -9,7 +9,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- link css files -->
     <link rel="stylesheet" href="style.css">
-    <!-- font -->
     
 </head>
 <body class="raleway-normal">
@@ -122,7 +121,8 @@
                                     </div>
                                                     <!-- first line right -->
                                     <div class="flex items-center">
-                                        <div class="flex"><img alt="seat logo" src="images/seat-green.png"> </img> <p class="inter-normal text-2xl text-[#1dd100]"> 40 Seats left <p></div>
+                                        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                                        <div class="flex"><img alt="seat logo" src="images/seat-green.png"> </img> <p class="inter-normal text-2xl text-[#1dd100]"> <span id="seatLeft">8</span> Seats left <p></div>
                                     </div> 
                                 </div>
                             </div>   
@@ -172,47 +172,57 @@
                             <span class="flex"><img src="images/seat-gray.png" alt="seat"><P>Available</P></span>
                             <span class="flex"><img src="images/seat-green-filled.png" alt="seat"><p>Selected</p></span>
                         </div>
+                        <div id="warn" hidden>
+                            <div role="alert" class="alert alert-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                <span>Warning: You can buy up to 4 tickets! You can deselect the seats and again choose your seats.</span>
+                            </div>
+                        </div>
                         <div class="grid grid-cols-7 my-4">
                             <button disabled class="col-start-7 justify-items-center gap-4 flex flex-col justify-center items-center h-7 w-11 bg-[#0307121a] rounded-md"><img class="w-[70%] h-[70%]" src="images/2812495.png" alt="steering"></button>
                         </div>
 <!-- seats -->
-                        <div class="raleway-normal font-medium text-sm grid grid-cols-9 justify-items-center gap-4">
-                            <div class="text-gray-300 h-7 w-4 col-span-1 flex flex-col items-center justify-center"><p>A</p></div>
-                            <button id="A1" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">A1</button>
-                            <button id="A2" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">A2</button>
-                            <button id="A3" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">A3</button>
-                            <button id="A4" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">A4</button>
-                            <div class="text-gray-300 h-7 w-4 col-span-1 flex flex-col items-center justify-center"><p>B</p></div>
-                            <button id="B1" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">B1</button>
-                            <button id="B2" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">B2</button>
-                            <button id="B3" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">B3</button>
-                            <button id="B4" class="but col-span-2 h-7 w-11 bg-[#f7f8f8] rounded-md">B4</button>
-                        </div>
+        <div class="raleway-normal font-medium text-sm grid grid-cols-9 justify-items-center gap-4">
+            <div class="text-gray-300 h-7 w-4 col-span-1 flex flex-col items-center justify-center"><p>A</p></div>
+            <button id="A1" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">A1</button>
+            <button id="A2" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">A2</button>
+            <button id="A3" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">A3</button>
+            <button id="A4" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">A4</button>
+            <div class="text-gray-300 h-7 w-4 col-span-1 flex flex-col items-center justify-center"><p>B</p></div>
+            <button id="B1" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">B1</button>
+            <button id="B2" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">B2</button>
+            <button id="B3" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">B3</button>
+            <button id="B4" class="but col-span-2 h-7 w-11 rounded-md bg-slate-50">B4</button>
+        </div>
                     </div>
                     <!-- divider -->
-                    <div class="hidden lg:inline-block border-dashed lg:border-2 mx-2"></div>
+                    <div class="hidden lg:inline-block border-dashed border-gray-200 lg:border-2 mx-2"></div>
                     <!-- ___________2ndPart________ -->
                     <div class="flex-1 p-2">
-                        <h1 class="font-bold text-xl border-dashed border-b-2 py-2 mb-7">Select Your Seat</h1>
+                        <h1 class="font-bold text-xl border-dashed border-gray-200 border-b-2 py-2 mb-7">Select Your Seat</h1>
                         
                         <div class="bg-[#f7f8f8] p-2 rounded-2xl">
-                            <div class="flex justify-between m-2 border-dashed border-b-2 font-bold">
-                                <div>Seat <span class="bg-[#1dd100] px-2 rounded-md font-extrabold">0</span></div>
+                            <div class="flex justify-between m-2 border-dashed border-gray-200 border-b-2 font-bold">
+                                <!-- ++++++++++++++++++++++++++++++++ -->
+                                <div>Seat <span id="seatBooked" class="bg-[#1dd100] px-2 rounded-md font-extrabold">0</span></div>
                                 <div>Class</div>
                                 <div>Price</div>
                             </div>
-                            <div class="flex justify-between m-2 border-dashed border-t-2 font-bold">
+                            <div id="append"></div>
+                            <div class="flex justify-between m-2 border-dashed border-gray-200 border-t-2 font-bold">
                                 <div>Total Price</div>
-                                <div>BDT <span>000</span></div>
+                                <!-- ++++++++++++++++++++++++++++++++ -->
+                                <div>BDT <span id="totalPrice">000</span></div>
                             </div>
                             <div class="flex flex-col relative">
                                 <input placeholder="Have any coupon?" id="" class="bg-white flex-1 rounded-md box-border p-4">
                                 <button class="absolute mt-2 mr-2 right-0 hover:bg-green-600 text-white font-bold flex items-center justify-center rounded-lg py-2 px-7 bg-[#1dd100]">Apply</button>
                                 
                             </div>
-                            <div class="flex justify-between m-2 border-dashed font-bold">
+                            <div class="flex justify-between m-2 border-dashed border-gray-200 font-bold">
                                 <div>Grand Total</div>
-                                <div>BDT <span>000</span></div>
+                                <!-- ++++++++++++++++++++++++++++++++++++ -->
+                                <div>BDT <span id="grandTotal">000</span></div>
                             </div>
                             <!-- form -->
                             <div class="mt-14">
@@ -248,7 +258,7 @@
                                                 <button type="submit" class="btn rounded-r-full rounded-l-full w-48 bg-[#27ae60]">Continue</button>
                                             </div>
                                         </form>
-                                      
+                                    
                                     </div>
                                     </dialog>
                                 </div>

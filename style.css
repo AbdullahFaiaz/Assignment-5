@@ -24,3 +24,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.but:hover{
+    transform: scale(1.1);
+}
